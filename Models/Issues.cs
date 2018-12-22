@@ -46,60 +46,60 @@ namespace NationStatesAPI.Models
 		public string Id { get; set; }
 	}
 
-	// [XmlRoot(ElementName="RANK")]
-	// public class RANK {
-	// 	[XmlElement(ElementName="SCORE")]
-	// 	public string SCORE { get; set; }
-	// 	[XmlElement(ElementName="CHANGE")]
-	// 	public string CHANGE { get; set; }
-	// 	[XmlElement(ElementName="PCHANGE")]
-	// 	public string PCHANGE { get; set; }
-	// 	[XmlAttribute(AttributeName="id")]
-	// 	public string Id { get; set; }
-	// }
+	[XmlRoot(ElementName="RANK")]
+	public class RANK {
+		[XmlElement(ElementName="SCORE")]
+		public string SCORE { get; set; }
+		[XmlElement(ElementName="CHANGE")]
+		public string CHANGE { get; set; }
+		[XmlElement(ElementName="PCHANGE")]
+		public string PCHANGE { get; set; }
+		[XmlAttribute(AttributeName="id")]
+		public string Id { get; set; }
+	}
 
-	// [XmlRoot(ElementName="RANKINGS")]
-	// public class RANKINGS {
-	// 	[XmlElement(ElementName="RANK")]
-	// 	public List<RANK> RANK { get; set; }
-	// }
+	[XmlRoot(ElementName="RANKINGS")]
+	public class RANKINGS {
+		[XmlElement(ElementName="RANK")]
+		public List<RANK> RANK { get; set; }
+	}
 
-	// [XmlRoot(ElementName="UNLOCKS")]
-	// public class UNLOCKS {
-	// 	[XmlElement(ElementName="BANNER")]
-	// 	public string BANNER { get; set; }
-	// }
+	[XmlRoot(ElementName="UNLOCKS")]
+	public class UNLOCKS {
+		[XmlElement(ElementName="BANNER")]
+		public string BANNER { get; set; }
+	}
 
-	// [XmlRoot(ElementName="HEADLINES")]
-	// public class HEADLINES {
-	// 	[XmlElement(ElementName="HEADLINE")]
-	// 	public List<string> HEADLINE { get; set; }
-	// }
+	[XmlRoot(ElementName="HEADLINES")]
+	public class HEADLINES {
+		[XmlElement(ElementName="HEADLINE")]
+		public List<string> HEADLINE { get; set; }
+	}
 
-	// [XmlRoot(ElementName="ISSUE")]
-	// public class ISSUE {
-	// 	[XmlElement(ElementName="OK")]
-	// 	public string OK { get; set; }
-	// 	[XmlElement(ElementName="DESC")]
-	// 	public string DESC { get; set; }
-	// 	[XmlElement(ElementName="RANKINGS")]
-	// 	public RANKINGS RANKINGS { get; set; }
-	// 	[XmlElement(ElementName="UNLOCKS")]
-	// 	public UNLOCKS UNLOCKS { get; set; }
-	// 	[XmlElement(ElementName="HEADLINES")]
-	// 	public HEADLINES HEADLINES { get; set; }
-	// 	[XmlAttribute(AttributeName="id")]
-	// 	public string Id { get; set; }
-	// 	[XmlAttribute(AttributeName="choice")]
-	// 	public string Choice { get; set; }
-	// }
+	[XmlRoot(ElementName="ISSUE")]
+	public class ISSUERESULT {
+		[XmlElement(ElementName="OK")]
+		public string OK { get; set; }
+		[XmlElement(ElementName="DESC")]
+		public string DESC { get; set; }
+		[XmlElement(ElementName="RANKINGS")]
+		public RANKINGS RANKINGS { get; set; }
+		[XmlElement(ElementName="UNLOCKS")]
+		public UNLOCKS UNLOCKS { get; set; }
+		[XmlElement(ElementName="HEADLINES")]
+		public HEADLINES HEADLINES { get; set; }
+		[XmlAttribute(AttributeName="id")]
+		public string Id { get; set; }
+		[XmlAttribute(AttributeName="choice")]
+		public string Choice { get; set; }
+	}
 
-	// [XmlRoot(ElementName="NATION")]
-	// public class NATION {
-	// 	[XmlElement(ElementName="ISSUE")]
-	// 	public ISSUE ISSUE { get; set; }
-	// 	[XmlAttribute(AttributeName="id")]
-	// 	public string Id { get; set; }
-	// }
+	[XmlRoot(ElementName="NATION")]
+	public class ISSUEPLAYEDRESPONSE {
+		[XmlElement(ElementName="ISSUE")]
+		public ISSUERESULT ISSUE { get; set; }
+		[XmlAttribute(AttributeName="id")]
+		public string Id { get; set; }
+	}
 
 }
