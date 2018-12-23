@@ -36,7 +36,7 @@ namespace NationStatesAPI.Commands
             // return (NationalIssues)new XmlSerializer(typeof(NationalIssues)).Deserialize(new StringReader(xmlTxt));
         }
 
-        public async Task<ISSUEPLAYEDRESPONSE> PlayIssue(int idIssue, int idOption)
+        public async Task<IssuePlayedResponse> PlayIssue(int idIssue, int idOption)
         {
             HttpClient hClient = new HttpClient();
             hClient.DefaultRequestHeaders.Clear();
@@ -50,7 +50,7 @@ namespace NationStatesAPI.Commands
             // sc.Headers.Add("Content-Type", "application/x-www-form-urlencoded");
             string xmlTxt = await hClient.GetStringAsync(NSConsts.BASE_URL + $"?nation={this.NCred.NationName}&c=issue&issue={idIssue}&option={idOption}");//hClient.PostAsync(NSConsts.BASE_URL, sc);
 
-            return (ISSUEPLAYEDRESPONSE)new XmlSerializer(typeof(ISSUEPLAYEDRESPONSE)).Deserialize(new StringReader(xmlTxt));
+            return (IssuePlayedResponse)new XmlSerializer(typeof(IssuePlayedResponse)).Deserialize(new StringReader(xmlTxt));
         }
     }
 
