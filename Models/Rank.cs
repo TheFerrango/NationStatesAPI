@@ -7,11 +7,11 @@ namespace NationStatesAPI.Models
 		[XmlElement(ElementName="SCORE")]
 		public string SCORE { get; set; }
 		[XmlElement(ElementName="CHANGE")]
-		public string CHANGE { get; set; }
+		public double CHANGE { get; set; }
 		[XmlElement(ElementName="PCHANGE")]
-		public string PCHANGE { get; set; }
+		public double PCHANGE { get; set; }
 		[XmlAttribute(AttributeName="id")]
-		public string Id { get; set; }
+		public int Id { get; set; }
 	}
 
 }

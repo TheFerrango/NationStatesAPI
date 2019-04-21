@@ -20,7 +20,7 @@ namespace NationStatesAPI.Models
 		[XmlElement(ElementName="OPTION")]
 		public List<IssueOptions> OPTION { get; set; }
 		[XmlAttribute(AttributeName="id")]
-		public string Id { get; set; }
+		public int Id { get; set; }
 	}
 
 }
