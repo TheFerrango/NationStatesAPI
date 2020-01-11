@@ -5,12 +5,12 @@ namespace NationStatesAPI.Models
     [XmlRoot(ElementName="SCALE")]
 	public class Scale {
 		[XmlElement(ElementName="SCORE")]
-		public string Score { get; set; }
+		public double Score { get; set; }
 		[XmlElement(ElementName="RANK")]
-		public string Rank { get; set; }
+		public int Rank { get; set; }
 		[XmlElement(ElementName="RRANK")]
-		public string RRank { get; set; }
+		public int RRank { get; set; }
 		[XmlAttribute(AttributeName="id")]
-		public string Id { get; set; }
+		public int Id { get; set; }
 	}
 }

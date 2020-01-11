@@ -40,6 +40,8 @@ namespace NationStatesAPI.Support
 
         public async Task<T> GetPublicNSObjectAsync<T>(string urlWithParameters) where T: class
         {
+            this.DefaultRequestHeaders.UserAgent.Clear();
+            this.DefaultRequestHeaders.UserAgent.ParseAdd("Software OverMistress");
             string xmlTxt = await this.GetStringAsync(urlWithParameters);
             return (T)new XmlSerializer(typeof(T)).Deserialize(new StringReader(xmlTxt));
         }
