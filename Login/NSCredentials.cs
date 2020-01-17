@@ -26,7 +26,7 @@ namespace NationStatesAPI.Login
                 hClient.DefaultRequestHeaders.Clear();
                 hClient.DefaultRequestHeaders.Add("x-password", this.Password);
                 hClient.DefaultRequestHeaders.UserAgent.Clear();
-                hClient.DefaultRequestHeaders.UserAgent.ParseAdd("Software OverMistress");
+                hClient.DefaultRequestHeaders.UserAgent.ParseAdd(NSConsts.USER_AGENT);
                 var rqLgn = await hClient.GetAsync(NSConsts.BASE_URL + $"?nation={this.NationName}&q=unread");
                 this.XPassword = rqLgn.Headers.GetValues("x-autologin").FirstOrDefault();
                 this.PIN = rqLgn.Headers.GetValues("x-pin").FirstOrDefault();
