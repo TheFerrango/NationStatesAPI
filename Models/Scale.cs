@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Xml.Serialization;
 
 namespace NationStatesAPI.Models
@@ -12,5 +13,8 @@ namespace NationStatesAPI.Models
 		public int RRank { get; set; }
 		[XmlAttribute(AttributeName="id")]
 		public int Id { get; set; }
+
+		[XmlElement(ElementName="POINT")]
+		public List<Point> Point { get; set; }
 	}
 }
